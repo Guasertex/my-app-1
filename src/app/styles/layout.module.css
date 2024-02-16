@@ -1,0 +1,90 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr 36px;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.anim_el .logo1 .logo2 {
+  pointer-events: none;
+}
+
+.logo1 {
+  @apply h-[64px] w-[100px];
+}
+
+.logo2 {
+  @apply h-[132px] w-[160px];
+}
+
+.header {
+  grid-area: header;
+  @apply mt-10 z-20;
+}
+
+.main {
+  grid-area: main;
+}
+
+.header,
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  grid-area: footer;
+  @apply flex flex-col items-center w-full h-[370px] bg-[#f6ffeb];
+}
+
+.nav {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  font-size: calc(10px + 2vmin);
+  @apply mr-9;
+}
+
+.link:hover {
+  @apply text-[#818676] underline;
+}
+
+.link {
+  @apply font-bold text-[#959693] text-[18px] mr-[45px];
+}
+
+.link.active {
+  @apply text-[#418A1C];
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .anim_el {
+    animation: anim_el-float infinite 3s ease-in-out;
+  }
+  .logo1 {
+    animation: anim_el-float infinite 3s ease-in-out;
+  }
+  .logo2 {
+    animation: anim_el-float infinite 3s ease-in-out;
+  }
+}
+
+@keyframes anim_el-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
