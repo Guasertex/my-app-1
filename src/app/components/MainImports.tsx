@@ -4,12 +4,15 @@ import styles from "../styles/layout.module.css";
 import Link from "next/link";
 import Image from "next/image";
 /* Components */
-import OrderButton from "./Button";
+import OrderButton from "./OrderButton";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { Hero } from "./Hero/Hero"
 import { Nav } from "./Nav";
+import DefaultNav from "./DefaultNav";
+import PlantNav from "./PlantNav";
+import { Hero } from "./Hero/Hero";
 import HeroContent from "./Hero/HeroContent";
+import PlantFooter from "./PlantFooter";
 /* Images */
 import logotype from "../../../public/logo1.svg";
 import logotype2 from "../../../public/logo2.svg";
@@ -37,10 +40,13 @@ export {
     Image,
     Link,
     Nav,
+    DefaultNav,
+    PlantNav,
     Header,
     Footer,
     Hero,
     HeroContent,
+    PlantFooter,
     OrderButton,
     logotype,
     logotype2,

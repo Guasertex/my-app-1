@@ -39,10 +39,14 @@
 
 .footer {
   grid-area: footer;
+}
+
+.footerPlant {
+  grid-area: footer;
   @apply flex flex-col items-center w-full h-[370px] bg-[#f6ffeb];
 }
 
-.nav {
+.nav .plantNav {
   grid-area: nav;
   display: flex;
   align-items: center;
@@ -50,6 +54,9 @@
   gap: 8px;
   padding: 8px;
   font-size: calc(10px + 2vmin);
+}
+
+.plantNav {
   @apply mr-9;
 }
 
